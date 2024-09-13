@@ -17,7 +17,7 @@ header {
 }
 
 header img {
-    max-width: 200px;
+    max-width: 100px;
     margin-bottom: 1rem;
 }
 
@@ -35,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #7a001b;
+    background-color: #e23e61;
 }
 
 /* Section Styles */
