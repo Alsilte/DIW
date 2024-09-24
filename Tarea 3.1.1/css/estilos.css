@@ -1,0 +1,52 @@
+
+.caja {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #d1cece;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.cuerpo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.post {
+    background-color: #777676;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-right: 8%;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 15px;
+}
+
+
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
