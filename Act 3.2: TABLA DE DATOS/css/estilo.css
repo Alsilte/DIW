@@ -1,0 +1,36 @@
+
+body{
+    display: grid;
+    place-items: center; /* Centra tanto horizontal como verticalmente */
+    height: 100vh;
+    margin: 0;
+}
+table{
+    text-align: center;
+    border-collapse: collapse;
+    font-family: Arial;
+    
+
+}
+
+th, td{
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+th{
+    background-image: url("../img/fondo_gris.gif");
+}
+
+.moneda{
+    background-color: #E6F3FF;
+}
+tr:nth-child(even){
+    background-color: #FFFFCC;
+}
+
+.seleccion:hover{
+    background-color: #FFFF66;
+}
+
+
