@@ -1,0 +1,66 @@
+body{
+    background-image: url("../img/old_map.png");
+    
+}
+
+.header{
+    background-color: rgb(44, 52, 63);
+    display: flex;
+    padding: 10px;
+    border-bottom: 8px solid black;}
+.header h1{
+    color: white;
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.header img{
+    width: 5%;
+    height: auto
+}
+.barra{
+    background-color: black;
+}
+.menu{
+    background-image: url("../img/red015.jpg");
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.menu .amarillo{
+    color: yellow;
+}
+
+.cuerpo {
+    background-image: url("../img/lgrey008.jpg");
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 8px solid black;
+}
+
+.card{
+    background-color: white;
+    padding: 8px;
+    text-align: center;
+    width: 15%;
+    
+}
+.card img{
+    width: 100%;
+}
+.card p{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+.final{
+    background-color: rgb(44, 52, 63);
+    padding: 10px 
+}
+.final pre{
+    color: white;
+    text-align: center;
+}
