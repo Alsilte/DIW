@@ -1,0 +1,95 @@
+body{
+    background-color: cadetblue;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: white;
+    width: 980px;
+    height: auto;
+    padding: 20px;
+    
+}
+h1{
+    text-align: center;
+    
+}
+hr{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: cadetblue;
+    
+    
+}
+p{
+    text-align: center;
+}
+
+.small{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big{
+    justify-content: center;
+}
+.small .caja{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 10px;
+}
+
+.big .caja{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 900px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 10px;
+    margin-top: 40px;
+    border-radius: 50px 50px 50px 50px;
+    
+}
+
+#caja1{
+    border-radius: 20px 20px 5px 80px;
+}
+#caja2{
+    border-radius: 5px 5px 5px 5px;
+}
+#caja3{
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: inset 0 -40px 20px cadetblue;
+    
+}
+#caja4{
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: inset 0 0 40px 0px cadetblue;
+}
+#caja5{
+    border-radius: 50px 50px 50px 50px;
+}
+#caja6{
+    border-radius: 5px 5px 5px 5px;
+}
+
+#caja7{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 10px 10px 10px cadetblue;
+
+}
+
+#caja9{
+    text-shadow: 5px 5px 5px cadetblue;
+}
+
+#caja10{
+    border-radius: 50px 50px 50px 50px;
+    background: linear-gradient(70deg, white, cadetblue);
+}
