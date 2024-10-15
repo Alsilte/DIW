@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+main{
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    height: 100vh; /* Altura del main para ocupar toda la pantalla */}
+
+a {
+    text-decoration: none;
+}
+
+ul li ul li a:hover {
+    color: red;
+}
+
+ul {
+    list-style-type: none; /* Sin viñetas */
+}
+
+ul li {
+    position: relative;
+    display: inline-block; /* Los elementos del menú principal estarán alineados horizontalmente */
+    padding: 20px; /* Espacio alrededor de cada opción */
+}
+
+ul li ul {
+    position: absolute;
+    top: 100%; /* El submenú aparecerá justo debajo del menú principal */
+    left: 0;
+    display: none; /* Oculto por defecto */
+    z-index: 2;
+    width: 100px; /* Ancho de los submenús */
+}
+
+ul li ul li {
+    background-color: #313131;
+    text-align: center;
+    padding: 10px;
+    font-family: Verdana;
+    font-size: 0.7em;
+}
+
+ul li:hover ul {
+    display: block; /* Mostrar el submenú al pasar el ratón sobre el menú principal */
+}
+
+ul li ul li:hover {
+    background-color: #444; /* Color de fondo al hacer hover en el submenú */
+}
+
+ul li ul li a {
+    color: #fff; /* Color del texto del submenú */
+}
+
+ul li ul li:nth-child(odd) {
+    background-color: #363636; /* Fondo de elementos impares del submenú */
+}
+
+ul li ul li:first-child {
+    border-radius: 3px 3px 0 0; /* Esquinas redondeadas para el primer elemento del submenú */
+}
+
+ul li ul li:last-child {
+    border-radius: 0 0 3px 3px; /* Esquinas redondeadas para el último elemento del submenú */
+}
+
+/* Triángulo en el submenú */
+li ul li:first-child:before {
+    content: ' ';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    border-bottom-color: #313131;
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
