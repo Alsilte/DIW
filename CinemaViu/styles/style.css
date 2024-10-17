@@ -1,92 +1,130 @@
-/* Global Styles */
+/* Estilos Globales */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif; /* Fuente utilizada para el texto */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    margin: 0; /* Sin margen por defecto */
+    padding: 0; /* Sin padding por defecto */
+    background-color: #f4f4f4; /* Color de fondo de la página */
+    color: #333; /* Color del texto */
 }
 
-/* Header Styles */
+/* Estilos del Encabezado */
 header {
-    background-color: #7a001b;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background-color: #7a001b; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+    padding: 1rem; /* Espacio alrededor del contenido del encabezado */
+    top: 0; /* Fijar en la parte superior */
+    z-index: 1000; /* Asegurarse de que el encabezado esté encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra del encabezado para darle profundidad */
 }
 
-header img {
-    max-width: 100px;
-    margin-bottom: 1rem;
+header nav {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    justify-content: center; /* Centrar horizontalmente todos los elementos del nav */
+    align-items: center; /* Centrar los elementos verticalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten a varias líneas si es necesario */
+    max-width: 1200px; /* Ancho máximo del contenedor de navegación */
+    margin: 0 auto; /* Centrar el contenedor de navegación */
 }
 
-nav {
-    margin-top: 1rem;
+header nav img {
+    max-width: 100px; /* Ancho máximo de la imagen del logo */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-right: 2rem; /* Espacio a la derecha de la imagen */
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+header nav a {
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    padding: 0.5rem 1rem; /* Espacio alrededor de los enlaces */
+    margin: 0.5rem; /* Margen alrededor de los enlaces */
+    border-radius: 5px; /* Bordes redondeados para los enlaces */
+    transition: all 0.5s ease; /* Transición suave para los efectos */
+    font-weight: bold; /* Negrita para el texto de los enlaces */
 }
 
-nav a:hover {
-    background-color: #e23e61;
+header nav a:hover {
+    background-color: #e23e61; /* Color de fondo al pasar el ratón sobre el enlace */
+    transform: translateY(-2px); /* Efecto de elevación al hacer hover */
 }
 
-/* Section Styles */
+/* Estilos de Sección */
 section {
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem; /* Espacio interno en la sección */
+    margin: 2rem auto; /* Margen superior/inferior y centrado horizontalmente */
+    max-width: 800px; /* Ancho máximo de la sección */
+    background-color: #fff; /* Color de fondo de la sección */
+    border-radius: 5px; /* Bordes redondeados para la sección */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para la sección */
 }
 
 h1, h2 {
-    color: #7a001b;
+    color: #7a001b; /* Color de los encabezados */
 }
 
 section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    max-width: 100%; /* Ancho máximo de las imágenes dentro de la sección */
+    height: auto; /* Mantener la proporción de las imágenes */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 1rem; /* Espacio debajo de las imágenes */
 }
 
-/* Table Styles */
+/* Estilos de Tabla */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
+    width: 100%; /* Ancho completo de la tabla */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+    margin-top: 1rem; /* Margen superior para la tabla */
 }
 
 th, td {
-    padding: 0.5rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    padding: 0.5rem; /* Espacio dentro de las celdas */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Línea divisoria inferior para las celdas */
 }
 
 th {
-    background-color: #7a001b;
-    color: #fff;
+    background-color: #7a001b; /* Color de fondo de las celdas de encabezado */
+    color: #fff; /* Color del texto de las celdas de encabezado */
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Color de fondo para las filas pares */
 }
 
-/* Footer Styles */
+/* Estilos de Pie de Página */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    bottom: 0;
-    width: 100%;
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto en el pie de página */
+    text-align: center; /* Centrar el texto del pie de página */
+    padding: 1rem; /* Espacio alrededor del contenido del pie de página */
+    bottom: 0; /* Alinear al fondo */
+    width: 100%; /* Ancho completo del pie de página */
+    display: flex; /* Usar flexbox para alinear los elementos */
+    flex-direction: column; /* Disposición vertical para los enlaces en el pie de página */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+}
+
+footer nav {
+    display: flex; /* Usar flexbox para alinear los enlaces */
+    justify-content: center; /* Centrar horizontalmente los enlaces */
+    flex-wrap: wrap; /* Permitir que los enlaces se ajusten si es necesario */
+    width: 100%; /* Asegurarte de que el nav no exceda el ancho */
+}
+
+footer nav a {
+    margin: 0 10px; /* Espacio horizontal entre los enlaces */
+    color: #fff; /* Color del texto en el footer */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+/* Media queries para mejorar la responsividad */
+@media screen and (max-width: 768px) {
+    footer nav {
+        flex-direction: column; /* Apilar enlaces en vertical en pantallas pequeñas */
+    }
+
+    footer nav a {
+        margin: 5px 0; /* Espacio vertical entre los enlaces en pantallas pequeñas */
+    }
 }
