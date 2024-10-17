@@ -1,95 +1,115 @@
-body{
-    background-color: cadetblue;
-    display: grid;
-    place-items: center;
+/* Estilo general para el body */
+body {
+    background-color: cadetblue; /* Color de fondo del body */
+    display: grid; /* Utiliza un layout de cuadrícula */
+    place-items: center; /* Centra el contenido tanto horizontal como verticalmente */
 }
 
-.container{
-    background-color: white;
-    width: 980px;
-    height: auto;
-    padding: 20px;
-    
-}
-h1{
-    text-align: center;
-    
-}
-hr{
-    margin-left: 10px;
-    margin-right: 10px;
-    color: cadetblue;
-    
-    
-}
-p{
-    text-align: center;
+/* Estilo para el contenedor principal */
+.container {
+    background-color: white; /* Color de fondo blanco para el contenedor */
+    width: 980px; /* Ancho del contenedor */
+    height: auto; /* Altura automática según el contenido */
+    padding: 20px; /* Espacio interno de 20px */
 }
 
-.small{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Estilo para los encabezados h1 */
+h1 {
+    text-align: center; /* Alinea el texto del encabezado al centro */
 }
 
-.big{
-    justify-content: center;
-}
-.small .caja{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 200px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin: 10px;
+/* Estilo para las líneas horizontales */
+hr {
+    margin-left: 10px; /* Margen izquierdo de 10px */
+    margin-right: 10px; /* Margen derecho de 10px */
+    color: cadetblue; /* Color de la línea horizontal */
 }
 
-.big .caja{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 900px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin: 10px;
-    margin-top: 40px;
-    border-radius: 50px 50px 50px 50px;
-    
+/* Estilo para los párrafos */
+p {
+    text-align: center; /* Alinea el texto del párrafo al centro */
 }
 
-#caja1{
-    border-radius: 20px 20px 5px 80px;
-}
-#caja2{
-    border-radius: 5px 5px 5px 5px;
-}
-#caja3{
-    border-radius: 50px 50px 50px 50px;
-    box-shadow: inset 0 -40px 20px cadetblue;
-    
-}
-#caja4{
-    border-radius: 50px 50px 50px 50px;
-    box-shadow: inset 0 0 40px 0px cadetblue;
-}
-#caja5{
-    border-radius: 50px 50px 50px 50px;
-}
-#caja6{
-    border-radius: 5px 5px 5px 5px;
+/* Estilo para contenedores pequeños usando flexbox */
+.small {
+    display: flex; /* Utiliza flexbox para el diseño */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
-#caja7{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    box-shadow: 10px 10px 10px cadetblue;
-
+/* Estilo para contenedores grandes usando flexbox */
+.big {
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
-#caja9{
-    text-shadow: 5px 5px 5px cadetblue;
+/* Estilo para las cajas dentro de contenedores pequeños */
+.small .caja {
+    border: 1px solid black; /* Bordes de 1px sólido negro */
+    border-radius: 10px; /* Esquinas redondeadas de 10px */
+    width: 200px; /* Ancho de 200px */
+    padding-left: 30px; /* Espacio interno a la izquierda de 30px */
+    padding-right: 30px; /* Espacio interno a la derecha de 30px */
+    margin: 10px; /* Margen de 10px alrededor */
 }
 
-#caja10{
-    border-radius: 50px 50px 50px 50px;
-    background: linear-gradient(70deg, white, cadetblue);
+/* Estilo para las cajas dentro de contenedores grandes */
+.big .caja {
+    border: 1px solid black; /* Bordes de 1px sólido negro */
+    border-radius: 10px; /* Esquinas redondeadas de 10px */
+    width: 900px; /* Ancho de 900px */
+    padding-left: 30px; /* Espacio interno a la izquierda de 30px */
+    padding-right: 30px; /* Espacio interno a la derecha de 30px */
+    margin: 10px; /* Margen de 10px alrededor */
+    margin-top: 40px; /* Margen superior de 40px */
+    border-radius: 50px; /* Esquinas redondeadas de 50px */
+}
+
+/* Estilo específico para la caja con ID caja1 */
+#caja1 {
+    border-radius: 20px 20px 5px 80px; /* Esquinas redondeadas con valores diferentes para cada esquina */
+}
+
+/* Estilo específico para la caja con ID caja2 */
+#caja2 {
+    border-radius: 5px; /* Esquinas redondeadas de 5px */
+}
+
+/* Estilo específico para la caja con ID caja3 */
+#caja3 {
+    border-radius: 50px; /* Esquinas redondeadas de 50px */
+    box-shadow: inset 0 -40px 20px cadetblue; /* Sombra interna de 20px de cadetblue */
+}
+
+/* Estilo específico para la caja con ID caja4 */
+#caja4 {
+    border-radius: 50px; /* Esquinas redondeadas de 50px */
+    box-shadow: inset 0 0 40px 0px cadetblue; /* Sombra interna de 40px de cadetblue */
+}
+
+/* Estilo específico para la caja con ID caja5 */
+#caja5 {
+    border-radius: 50px; /* Esquinas redondeadas de 50px */
+}
+
+/* Estilo específico para la caja con ID caja6 */
+#caja6 {
+    border-radius: 5px; /* Esquinas redondeadas de 5px */
+}
+
+/* Estilo específico para la caja con ID caja7 */
+#caja7 {
+    padding-top: 10px; /* Espacio superior de 10px */
+    padding-bottom: 10px; /* Espacio inferior de 10px */
+    box-shadow: 10px 10px 10px cadetblue; /* Sombra de 10px de cadetblue */
+}
+
+/* Estilo específico para la caja con ID caja9 */
+#caja9 {
+    text-shadow: 5px 5px 5px cadetblue; /* Sombra de texto de 5px de cadetblue */
+}
+
+/* Estilo específico para la caja con ID caja10 */
+#caja10 {
+    border-radius: 50px; /* Esquinas redondeadas de 50px */
+    background: linear-gradient(70deg, white, cadetblue); /* Fondo con degradado de blanco a cadetblue */
 }

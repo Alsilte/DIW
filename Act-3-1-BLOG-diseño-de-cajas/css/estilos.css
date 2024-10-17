@@ -1,50 +1,58 @@
+/* Estilo general para la clase .caja */
 .caja {
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: #d1cece;
-    padding: 20px;
+    margin-left: 20%; /* Margen izquierdo del 20% del ancho del contenedor */
+    margin-right: 20%; /* Margen derecho del 20% del ancho del contenedor */
+    background-color: #d1cece; /* Color de fondo */
+    padding: 20px; /* Espacio interno de 20px */
 }
 
+/* Estilo para el encabezado */
 .header {
-    text-align: left;
-    border-bottom: 1px solid #ccc;
+    text-align: left; /* Alinea el texto a la izquierda */
+    border-bottom: 1px solid #ccc; /* Línea inferior de 1px en color gris claro */
 }
 
+/* Estilo para los enlaces en el encabezado */
 .header a {
-    text-decoration: none;
-    color: black;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: black; /* Color del texto del enlace */
 }
 
-/* Layout sin Flex */
+/* Estilo para el cuerpo de la página */
 .cuerpo {
-    margin-top: 20px;
+    margin-top: 20px; /* Margen superior de 20px */
 }
 
+/* Estilo para la sección de publicaciones */
 .posts {
-    width: 65%;
-    float: left;
+    width: 65%; /* Ancho del 65% del contenedor padre */
+    float: left; /* Flota a la izquierda */
 }
 
+/* Estilo para cada publicación */
 .post {
-    background-color: #777676;
-    padding: 15px;
-    margin-bottom: 15px;
+    background-color: #777676; /* Color de fondo gris oscuro */
+    padding: 15px; /* Espacio interno de 15px */
+    margin-bottom: 15px; /* Margen inferior de 15px entre publicaciones */
 }
 
+/* Estilo para la barra lateral */
 .sidebar {
-    width: 30%;
-    float: right;
-    padding: 15px;
+    width: 30%; /* Ancho del 30% del contenedor padre */
+    float: right; /* Flota a la derecha */
+    padding: 15px; /* Espacio interno de 15px */
 }
 
+/* Estilo para la lista en la barra lateral */
 .sidebar ul {
-    padding-left: 0;
+    padding-left: 0; /* Elimina el padding izquierdo de la lista */
 }
 
+/* Estilo para el pie de página */
 .footer {
-    clear: both;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
+    clear: both; /* Limpia los flotantes anteriores para evitar solapamientos */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espacio interno de 10px */
+    margin-top: 20px; /* Margen superior de 20px */
+    border-top: 1px solid #ccc; /* Línea superior de 1px en color gris claro */
 }

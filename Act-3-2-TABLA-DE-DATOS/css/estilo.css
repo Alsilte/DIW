@@ -1,36 +1,40 @@
-
-body{
-    display: grid;
-    place-items: center; /* Centra tanto horizontal como verticalmente */
-    height: 100vh;
-    margin: 0;
-}
-table{
-    text-align: center;
-    border-collapse: collapse;
-    font-family: Arial;
-    
-
+/* Estilo general para el body */
+body {
+    display: grid; /* Utiliza un layout de cuadrícula */
+    place-items: center; /* Centra el contenido tanto horizontal como verticalmente */
+    height: 100vh; /* Altura del 100% de la ventana del navegador */
+    margin: 0; /* Elimina los márgenes predeterminados del body */
 }
 
-th, td{
-    border: 1px solid #333;
-    padding: 5px;
+/* Estilo para la tabla */
+table {
+    text-align: center; /* Alinea el texto al centro en la tabla */
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+    font-family: Arial; /* Define la fuente de la tabla */
 }
 
-th{
-    background-image: url("../img/fondo_gris.gif");
+/* Estilo para las celdas de la tabla (th y td) */
+th, td {
+    border: 1px solid #333; /* Bordes de 1px sólido de color gris oscuro */
+    padding: 5px; /* Espacio interno de 5px dentro de las celdas */
 }
 
-.moneda{
-    background-color: #E6F3FF;
-}
-tr:nth-child(even){
-    background-color: #FFFFCC;
+/* Estilo para los encabezados de la tabla */
+th {
+    background-image: url("../img/fondo_gris.gif"); /* Fondo con imagen para el encabezado */
 }
 
-.seleccion:hover{
-    background-color: #FFFF66;
+/* Estilo para las celdas con la clase .moneda */
+.moneda {
+    background-color: #E6F3FF; /* Color de fondo azul claro */
 }
 
+/* Estilo para filas de la tabla con número par */
+tr:nth-child(even) {
+    background-color: #FFFFCC; /* Color de fondo amarillo claro para filas pares */
+}
 
+/* Estilo para las filas con la clase .seleccion al pasar el ratón */
+.seleccion:hover {
+    background-color: #FFFF66; /* Color de fondo amarillo más intenso al pasar el ratón */
+}

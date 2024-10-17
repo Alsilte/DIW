@@ -1,0 +1,99 @@
+/*Estilos con overflow:hidden*/
+/* Reset de márgenes y padding para todos los elementos */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Estilo principal del contenedor */
+main {
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: center; /* Centra horizontalmente */
+    height: 100vh; /* Altura del contenedor principal ocupa toda la pantalla */
+}
+
+/* Estilo para enlaces */
+a {
+    text-decoration: none; /* Elimina subrayado de los enlaces */
+}
+
+/* Color del texto del enlace del submenú al hacer hover */
+ul li ul li a:hover {
+    color: red;
+}
+
+/* Estilo para la lista sin viñetas */
+ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+}
+
+/* Estilo para los elementos de la lista principal */
+ul li {
+    position: relative; /* Posición relativa para el submenú */
+    display: inline-block; /* Alineación horizontal de los elementos del menú principal */
+    padding: 20px; /* Espacio alrededor de cada opción */
+    z-index: 10; /* Asegúrate de que el submenú esté por encima */
+}
+
+/* Estilo para el submenú */
+ul li ul {
+    position: absolute; /* Posiciona el submenú respecto al elemento padre */
+    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+    left: 0; /* Alinea a la izquierda */
+    max-height: 0; /* Inicialmente oculta el submenú */
+    overflow: hidden; /* Oculta el contenido excedente */
+    transition: max-height 0.3s ease; /* Transición suave para la expansión del submenú */
+}
+
+/* Estilo al hacer hover en el menú principal */
+ul li:hover ul {
+    max-height: 200px; /* Aumenta la altura máxima para mostrar el submenú */
+    margin-left: 10%;
+}
+
+/* Estilo para los elementos del submenú */
+ul li ul li {
+    background-color: #313131; /* Color de fondo del submenú */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espacio alrededor de cada opción del submenú */
+    font-family: Verdana; /* Fuente para el texto */
+    font-size: 0.7em; /* Tamaño de fuente */
+}
+
+/* Color de fondo del submenú al hacer hover */
+ul li ul li:hover {
+    background-color: #444; /* Color de fondo al pasar el ratón sobre el submenú */
+}
+
+/* Color del texto del submenú */
+ul li ul li a {
+    color: #fff; /* Color del texto del submenú */
+}
+
+/* Estilo para los elementos impares del submenú */
+ul li ul li:nth-child(odd) {
+    background-color: #363636; /* Color de fondo para elementos impares */
+}
+
+/* Esquinas redondeadas para el primer elemento del submenú */
+ul li ul li:first-child {
+    border-radius: 3px 3px 0 0; /* Esquinas redondeadas en la parte superior */
+}
+
+/* Esquinas redondeadas para el último elemento del submenú */
+ul li ul li:last-child {
+    border-radius: 0 0 3px 3px; /* Esquinas redondeadas en la parte inferior */
+}
+
+Triángulo en el submenú para dar un efecto visual
+li ul li:first-child:before {
+    content: ' '; /* Crea un pseudo-elemento */
+    position: absolute; /* Posición absoluta para posicionarlo correctamente */
+    width: 1px; /* Ancho del triángulo */
+    height: 1px; /* Altura del triángulo */
+    border: 5px solid transparent; /* Bordes transparentes para crear el triángulo */
+    border-bottom-color: #313131; /* Color del triángulo */
+    left: 50%; /* Centra el triángulo horizontalmente */
+    top: -10px; /* Coloca el triángulo arriba del submenú */
+    margin-left: -5px; /* Ajusta el margen para centrarlo */
+}

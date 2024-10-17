@@ -1,3 +1,4 @@
+/*Estilos con display:none y display:block*/
 * {
     margin: 0px;
     padding: 0px;
@@ -44,6 +45,7 @@ ul li ul li {
 
 ul li:hover ul {
     display: block; /* Mostrar el submenú al pasar el ratón sobre el menú principal */
+    /*transition: height linear 2s; con block no funciona*/ 
 }
 
 ul li ul li:hover {
