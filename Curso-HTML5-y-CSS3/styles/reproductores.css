@@ -52,7 +52,8 @@ nav li {
     display: inline-block;
     text-align: center;
     cursor: default;
-    position: relative; /* Importante para que el submenú se alinee con su posición */
+    position: relative;
+    /* Importante para que el submenú se alinee con su posición */
 }
 
 nav li#contenido {
@@ -89,25 +90,33 @@ nav a:hover {
 nav ul li#videos ul {
     display: flex;
     flex-direction: column;
-    position: absolute; /* Posiciona el submenú respecto al elemento padre */
-    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
-    left: 90px; /* Alinea a la izquierda */
-    max-height: 0; /* Inicialmente oculta el submenú */
-    overflow: hidden; /* Oculta el contenido excedente */
-    transition: max-height 0.3s ease; /* Transición suave para la expansión del submenú */
+    position: absolute;
+    /* Posiciona el submenú respecto al elemento padre */
+    top: 100%;
+    /* Coloca el submenú justo debajo del elemento padre */
+    left: 90px;
+    /* Alinea a la izquierda */
+    max-height: 0;
+    /* Inicialmente oculta el submenú */
+    overflow: hidden;
+    /* Oculta el contenido excedente */
+    transition: max-height 0.3s ease;
+    /* Transición suave para la expansión del submenú */
     z-index: 5;
 }
 
 /* Al hacer hover en #videos, el submenú se muestra */
 nav ul li#videos:hover ul {
-    max-height: 200px; /* Aumenta la altura máxima para mostrar el submenú */
+    max-height: 200px;
+    /* Aumenta la altura máxima para mostrar el submenú */
 }
 
 /* Estilo de los elementos del submenú */
 nav ul li#videos ul li {
     padding: 10px;
     background-color: #e34c26;
-    font-size: 0.8em; /* Ajusta el tamaño de la fuente aquí */
+    font-size: 0.8em;
+    /* Ajusta el tamaño de la fuente aquí */
 }
 
 nav ul li#videos ul li:nth-child(even) {
@@ -126,83 +135,62 @@ nav ul li#videos:before {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid #f06529; /* Color del triángulo */
-    left: 50%; /* Centrar horizontalmente */
-    top: 122px; /* Ajusta la posición vertical para que esté encima del submenú */
-    transform: translateX(-50%); /* Centra el triángulo horizontalmente */
-    z-index: 10; /* Asegúrate de que este valor sea mayor que el del submenú */
-    visibility: hidden; /* Oculto por defecto */
-    opacity: 0; /* Oculto por defecto */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transición suave */
+    border-bottom: 5px solid #f06529;
+    /* Color del triángulo */
+    left: 50%;
+    /* Centrar horizontalmente */
+    top: 122px;
+    /* Ajusta la posición vertical para que esté encima del submenú */
+    transform: translateX(-50%);
+    /* Centra el triángulo horizontalmente */
+    z-index: 10;
+    /* Asegúrate de que este valor sea mayor que el del submenú */
+    visibility: hidden;
+    /* Oculto por defecto */
+    opacity: 0;
+    /* Oculto por defecto */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Transición suave */
 }
 
 /* Mostrar triángulo junto con el submenú */
 nav ul li#videos:hover:before {
-    visibility: visible; /* Muestra el triángulo al hacer hover */
-    opacity: 1; /* Hace visible el triángulo al hacer hover */
+    visibility: visible;
+    /* Muestra el triángulo al hacer hover */
+    opacity: 1;
+    /* Hace visible el triángulo al hacer hover */
 }
+
 main {
     font-family: Verdana, sans-serif;
     font-size: 0.8em;
-    background-color: white;
+    background-color: white; /* Fondo blanco para el contenedor main */
     padding: 5px;
+    display: flex; /* Usar flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
 }
-
-section {
-    width: 240px;
-    border: 1px solid lightgray;
+main section {
     background-color: white;
+    display:flex;
+    flex-direction: column;
+    height: 2;
+    margin-right: 15%;
     text-align: center;
-    line-height: 1.8em;
-    padding: 5px 5px 22px 5px;
-    margin: 30px;
-    display: inline-block;
-    flex-wrap: wrap;
-    border-width: 60px 23px 50px 23px;
-    border-style: solid;
-    border-image: url('../img/movil.png');
-    border-image-slice: 70 25 70 25;
-    position: relative;
+    justify-content: center;    
 }
 
-section:first-of-type {
-    transform: rotate(-3deg);
-}
 
-section:last-of-type {
-    transform: rotate(3deg);
+input {
+    background-color: #f06529;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px black;
 }
-
-.chincheta {
-    width: 38px;
-    height: 49px;
-    position: absolute;
-    top: -75px;
-    background-image: url('../img/chincheta.png');
-    background-repeat: no-repeat;
-}
-
-#primera {
-    left: 205px;
-}
-
-#segunda {
-    left: 120px;
-}
-
-#tercera {
-    left: 35px;
-}
-
-article #javascript {
-    background: radial-gradient(rgb(247, 230, 85), rgb(252, 252, 252));
-}
-
-h2 {
-    font-family: 'Lato';
-    padding: 10px;
-    font-size: 1.2em;
-    text-shadow: 5px 5px 5px rgb(104, 104, 104);
+input:hover {
+    background-color: #ff7e42;
 }
 
 footer {
@@ -219,5 +207,30 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+}
+
+/* estilos para la barra de navegación y progreso */
+#barra
+{
+width: 705px;
+margin:5px;
+height: 16px;
+padding: 2px;
+border: 1px solid #CCCCCC;
+background: #EEEEEE;
+}
+#progreso
+{
+position: absolute;
+width: 0px;
+height: 16px;
+background:rgba(0,0,150,.2);
+}
+
+#reproductor{
+    background-color: rgb(170, 163, 163);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
