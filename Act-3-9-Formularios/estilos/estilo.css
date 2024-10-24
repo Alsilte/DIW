@@ -1,0 +1,117 @@
+/* Estilo general para el formulario */
+form {
+    margin: 10px auto; /* Márgenes superior e inferior de 10px, laterales automáticos para centrar */
+    border-top: 2px solid #888; /* Borde superior de 2px con color gris */
+    border-bottom: 2px solid #888; /* Borde inferior de 2px con color gris */
+    width: 710px; /* Ancho del formulario */
+    text-align: center; /* Centrar el texto dentro del formulario */
+    padding: 20px; /* Espaciado interno para que el contenido no toque los bordes */
+    background-color: rgba(0, 0, 0, 0.20); /* Fondo negro con opacidad del 20% */
+    background-image: url('../img/bg-form.png'); /* Imagen de fondo del formulario */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-position: bottom center; /* Posicionar la imagen en la parte inferior central */
+}
+
+/* Estilo para los elementos de la lista dentro del formulario */
+li {
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    margin-bottom: 15px; /* Espaciado inferior entre los elementos de la lista */
+}
+
+/* Estilo para las etiquetas */
+label {
+    margin: auto; /* Centrar las etiquetas horizontalmente */
+    text-align: center; /* Centrar el texto de las etiquetas */
+    font-family: 'League Gothic'; /* Establecer la familia tipográfica para las etiquetas */
+}
+
+/* Estilo para los elementos <span> */
+span {
+    font-size: small; /* Tamaño de fuente pequeño */
+    font-family: 'Arial'; /* Familia tipográfica para los elementos <span> */
+}
+
+/* Estilo para el título del formulario */
+h1 {
+    font-size: 2em; /* Tamaño de fuente para el título */
+    padding-bottom: 20px; /* Espaciado inferior del título */
+    background-image: url('../img/bg-formtitle-left.png'), url('../img/bg-formtitle-right.png'); /* Imágenes de fondo para los lados del título */
+    background-size: 100px auto; /* Tamaño de las imágenes de fondo */
+    background-repeat: no-repeat; /* No repetir las imágenes de fondo */
+    background-position: left top, right top; /* Posicionar las imágenes a la izquierda y derecha del título */
+    font-family: 'Acknowledgement Medium'; /* Familia tipográfica para el título */
+}
+
+/* Estilo para los botones */
+button {
+    border: none; /* Eliminar los bordes del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    background: radial-gradient(circle, rgb(144, 144, 144), rgb(72, 72, 72)); /* Fondo degradado radial */
+    color: white; /* Color del texto del botón */
+    text-transform: uppercase; /* Transformar el texto a mayúsculas */
+    font-size: 2em; /* Tamaño de fuente del texto del botón */
+    font-family: Tahoma, Geneva, sans-serif; /* Familia tipográfica para el botón */
+    opacity: 0.8; /* Opacidad del botón al 80% */
+    transition: opacity 0.25s linear; /* Transición suave para la opacidad */
+    font-family: 'League Gothic'; /* Cambiar la familia tipográfica a League Gothic */
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    opacity: 1; /* Aumentar la opacidad al pasar el ratón al 100% */
+}
+
+/* Estilo para los campos de entrada (input) */
+input {
+    background-color: transparent; /* Fondo transparente para que coincida con el fondo del formulario */
+    border: none; /* Eliminar el borde por defecto de los inputs */
+    border-bottom: 2px dotted #888; /* Borde inferior punteado */
+    padding: 5px; /* Espaciado interno del input */
+    margin: 5px; /* Margen entre los inputs */
+    width: 300px; /* Ancho de los inputs */
+    color: rgb(0, 0, 0); /* Color del texto de los inputs */
+    font-family: 'League Gothic'; /* Familia tipográfica para los inputs */
+    font-size: 1em; /* Tamaño de fuente para los inputs */
+    outline: none; /* Eliminar el contorno por defecto al enfocar */
+    text-align: center; /* Centrar el texto en los inputs */
+}
+
+/* Estilo para inputs requeridos */
+input:required {
+    background-image: url('../img/required.png'); /* Imagen que indica que el campo es requerido */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position: right top; /* Posicionar la imagen a la derecha en la parte superior */
+}
+
+/* Estilo para inputs requeridos y válidos al enfocarse */
+input:required:valid:focus {
+    background-image: url('../img/valid.png'); /* Imagen que indica que el campo es válido */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position: right top; /* Posicionar la imagen a la derecha en la parte superior */
+}
+
+/* Estilo para inputs requeridos e inválidos al enfocarse */
+input:required:invalid:focus {
+    background-image: url('../img/invalid.png'); /* Imagen que indica que el campo es inválido */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position: right top; /* Posicionar la imagen a la derecha en la parte superior */
+}
+
+/* Estilos para el texto seleccionado */
+::selection {
+    background-color: #484848; /* Color de fondo del texto seleccionado */
+    color: #fff; /* Color de fuente del texto seleccionado */
+    text-shadow: none; /* Sin sombra en el texto seleccionado */
+}
+
+/* Ocultar el icono del calendario en el campo de fecha */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none; /* Ocultar el ícono del calendario */
+    -webkit-appearance: none; /* Para navegadores WebKit */
+}
+
+/* Estilo para los campos de entrada numéricos */
+input[type="number"] {
+    width: 50px; /* Ancho específico para los inputs numéricos */
+}

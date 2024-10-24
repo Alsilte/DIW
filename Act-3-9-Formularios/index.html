@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Acknowledgement+Medium&display=swap"
+        rel="stylesheet">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <h1>Regístrate</h1>
+
+        <ul>
+            <li>
+                <label for="nombre">Mi nombre es:</label><br>
+                <input type="text" id="nombre" name="nombre" required autofocus>
+            </li>
+            <li>
+                <label for="email">Mi email <br><span>(puedes introducir varios separados por comas)</span></label><br>
+                <input type="email" name="email" id="email" required
+                    pattern="^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(,\s*([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}))*$"
+                    multiple> 
+            </li>
+            <li>
+                <label for="recuerdame">Recuérdame en este equipo</label><br>
+                <input type="checkbox" name="recuerdame">
+            </li>
+            <li>
+                <label for="url">Mi dirección web es:</label><br>
+                <input type="url" name="url">
+            </li>
+            <li>
+                <label for="password1">Me gustaría que mi password fuera: <br><span>(al menos 6 cararcteres, sin
+                        espacios)</span>
+                </label><br>
+                <input type="password" name="password1" required pattern="^(?=.*\S).{6,}$">
+            </li>
+            <li>
+                <label for="password2">Mi password repetida es:</label><br>
+                <input type="password" name="password2" required pattern="^(?=.*\S).{6,}$">
+            </li>
+            <li>
+                <label for="concocimientos">En una escala de 1 a 10, mis conocimientos de HTML5 son:</label><br>
+                <input type="range" name="concocimientos" min="1" max="10">
+
+            </li>
+            <li>
+                <label for="fechaInicio">Por favor, indica mi suscrupción el día:</label><br>
+                <input type="date" name="fechaInicio" required>
+            </li>
+            <li>
+                <label for="cantidad">Me gustaría recibir <input type="number" name="cantidad" value="1" min="1"
+                        max="5"> copias de El manual de
+                    HTML5.</label><br>
+            </li>
+            <li>
+                <label for="tambienCSS3">También regístrarme para El manual de CSS3</label><br>
+                <input type="checkbox" name="tambienCSS3">
+            </li>
+            <li>
+                <button>Envíame</button>
+
+            </li>
+        </ul>
+</body>
+
+</html>
