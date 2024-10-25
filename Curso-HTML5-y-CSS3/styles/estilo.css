@@ -10,15 +10,20 @@ body {
     text-align: left;
     box-shadow: 10px 10px 5px 5px #888888;
     border-radius: 20px 20px 20px 20px;
+    
 }
 
 header {
-    font-family: "Courier";
+    font-family: 'Luckiest Guy';
+    line-height: 1.4em;
     color: white;
     font-size: 1.1em;
     border-bottom: 6px solid black;
     background-image: linear-gradient(rgb(17, 108, 160), rgb(104, 170, 170));
     border-radius: 20px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente */
 }
 
 header h1 {
@@ -30,12 +35,12 @@ header h1 {
 
 header h1 img {
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: 2%;
 }
 
 nav {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Luckiest Guy';
     text-align: center;
     background-image: linear-gradient(rgb(240, 216, 5), rgb(218, 208, 120));
     font-size: 1.4em;
@@ -52,7 +57,8 @@ nav li {
     display: inline-block;
     text-align: center;
     cursor: default;
-    position: relative; /* Importante para que el submenú se alinee con su posición */
+    position: relative;
+    /* Importante para que el submenú se alinee con su posición */
 }
 
 nav li#contenido {
@@ -78,36 +84,45 @@ nav a {
     color: white;
     text-shadow: 0px 0px 5px white;
     transition: all 0.5s;
+    text-shadow: 2px 2px 5px #f06529;
 }
 
 nav a:hover {
-    color: white;
-    text-shadow: 2px 2px 0px red;
+    color: rgb(190, 186, 186);
+    text-shadow: 0px 0px 5px #ff7e42;
 }
 
 /* Submenú oculto por defecto */
 nav ul li#videos ul {
     display: flex;
     flex-direction: column;
-    position: absolute; /* Posiciona el submenú respecto al elemento padre */
-    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
-    left: 90px; /* Alinea a la izquierda */
-    max-height: 0; /* Inicialmente oculta el submenú */
-    overflow: hidden; /* Oculta el contenido excedente */
-    transition: max-height 0.3s ease; /* Transición suave para la expansión del submenú */
+    position: absolute;
+    /* Posiciona el submenú respecto al elemento padre */
+    top: 100%;
+    /* Coloca el submenú justo debajo del elemento padre */
+    left: 90px;
+    /* Alinea a la izquierda */
+    max-height: 0;
+    /* Inicialmente oculta el submenú */
+    overflow: hidden;
+    /* Oculta el contenido excedente */
+    transition: max-height 0.3s ease;
+    /* Transición suave para la expansión del submenú */
     z-index: 5;
 }
 
 /* Al hacer hover en #videos, el submenú se muestra */
 nav ul li#videos:hover ul {
-    max-height: 200px; /* Aumenta la altura máxima para mostrar el submenú */
+    max-height: 200px;
+    /* Aumenta la altura máxima para mostrar el submenú */
 }
 
 /* Estilo de los elementos del submenú */
 nav ul li#videos ul li {
     padding: 10px;
     background-color: #e34c26;
-    font-size: 0.8em; /* Ajusta el tamaño de la fuente aquí */
+    font-size: 0.8em;
+    /* Ajusta el tamaño de la fuente aquí */
 }
 
 nav ul li#videos ul li:nth-child(even) {
@@ -126,21 +141,32 @@ nav ul li#videos:before {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid #f06529; /* Color del triángulo */
-    left: 50%; /* Centrar horizontalmente */
-    top: 122px; /* Ajusta la posición vertical para que esté encima del submenú */
-    transform: translateX(-50%); /* Centra el triángulo horizontalmente */
-    z-index: 10; /* Asegúrate de que este valor sea mayor que el del submenú */
-    visibility: hidden; /* Oculto por defecto */
-    opacity: 0; /* Oculto por defecto */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transición suave */
+    border-bottom: 5px solid #f06529;
+    /* Color del triángulo */
+    left: 50%;
+    /* Centrar horizontalmente */
+    top: 118px;
+    /* Ajusta la posición vertical para que esté encima del submenú */
+    transform: translateX(-50%);
+    /* Centra el triángulo horizontalmente */
+    z-index: 10;
+    /* Asegúrate de que este valor sea mayor que el del submenú */
+    visibility: hidden;
+    /* Oculto por defecto */
+    opacity: 0;
+    /* Oculto por defecto */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Transición suave */
 }
 
 /* Mostrar triángulo junto con el submenú */
 nav ul li#videos:hover:before {
-    visibility: visible; /* Muestra el triángulo al hacer hover */
-    opacity: 1; /* Hace visible el triángulo al hacer hover */
+    visibility: visible;
+    /* Muestra el triángulo al hacer hover */
+    opacity: 1;
+    /* Hace visible el triángulo al hacer hover */
 }
+
 main {
     font-family: Verdana, sans-serif;
     font-size: 0.8em;
@@ -163,6 +189,7 @@ section {
     border-image: url('../img/movil.png');
     border-image-slice: 70 25 70 25;
     position: relative;
+    font-family: 'Abel';
 }
 
 section:first-of-type {
@@ -199,7 +226,6 @@ article #javascript {
 }
 
 h2 {
-    font-family: 'Lato';
     padding: 10px;
     font-size: 1.2em;
     text-shadow: 5px 5px 5px rgb(104, 104, 104);
@@ -220,4 +246,3 @@ footer a {
     color: white;
     text-decoration: none;
 }
-

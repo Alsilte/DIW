@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/reproductores.css">
+    <link rel="stylesheet" href="./styles/contacto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <title>Videos</title>
+    <title>Contacto</title>
 </head>
 
 <body>
@@ -27,29 +27,28 @@
                         <li><a href="videos.html">Videos3</a></li>
                     </ul>
                 </li>
-                <li id="contacto"><a href="./contacto.html">Contacto</a></li>
+                <li id="contacto"><a href="">Contacto</a></li>
             </ul>
         </nav>
         <main>
-            <div id="reproductor">
-                <video id="medio" width="720" height="400" controls>
-                    <source src="videos/video.mp4">
-                    <source src="">
-                </video>
-                <div id="barra">
-                    <div id="progreso"></div>
-                </div>
+            <div id="formulario">
+                <h1>Contáctenos</h1>
+                <form action="" method="post">
+                    <input type="text" name="nombre" placeholder="Escriba su nombre: " required list="nombres">
+                    <label for=""></label><br>
+                    <input type="email" name="email" placeholder=" Escriba su email: " required >
+                    <label for=""></label><br>
+                    <textarea name="mensaje" placeholder=" Su mensaje ..." required></textarea>
+                    <label for=""></label><br>
+                    <button type="submit">Enviar</button>
+                    <datalist id="nombres">
+                        <option value="alex"></option>
+                        <option value="juan"></option>
+                        <option value="ana"></option>
+                        <option value="pedro"></option>
+                    </datalist>
+                </form>
             </div>
-            <section>
-                <input type="button" id="reiniciar" value="Reiniciar">
-                <input type="button" id="retrasar" value="&laquo;">
-                <input type="button" id="play" value="&#9658;">
-                <input type="button" id="adelantar" value="&raquo;">
-                <input type="button" id="silenciar" value="Silenciar">
-                <label>Volumen</label>
-                <input type="button" id="menosVolumen" value="-">
-                <input type="button" id="masVolumen" value="+">
-            </section>
         </main>
         <footer>
             <a href="">HTML5 Y CSS3</a> <br>
