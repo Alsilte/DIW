@@ -37,6 +37,20 @@ header h1 img {
     position: absolute;
     top: 10%;
     left: 2%;
+    margin-left: 2.5%;
+    animation: rotar infinite 3s linear;
+}
+
+@keyframes rotar{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 nav {
@@ -204,23 +218,100 @@ section:last-of-type {
     width: 38px;
     height: 49px;
     position: absolute;
-    top: -75px;
+    top: -79px;
     background-image: url('../img/chincheta.png');
     background-repeat: no-repeat;
 }
 
-#primera {
-    left: 205px;
+
+#primera{
+    left: 0px;
+}
+
+#chincheta1 {
+    
+    left: 0px;
+    animation: mueveChincheta1 1s forwards;
+}
+
+@keyframes mueveChincheta1 {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 208px;
+    }
 }
 
 #segunda {
-    left: 120px;
+    left: 0px;
+}
+
+#chincheta2{
+    left: 0px;
+    animation: mueveChincheta2 1s forwards 0.5s;
+
+}
+
+@keyframes mueveChincheta2 {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 120px;
+    }
 }
 
 #tercera {
-    left: 35px;
+    left: 0px;
 }
 
+#chincheta3{
+    left: 0px;
+    animation: mueveChincheta3 1s forwards ;
+}
+@keyframes mueveChincheta3 {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 35px;
+    }   
+}
+
+#seccion1 {
+    transform: rotate(0deg);
+}
+
+    #section1 {
+    animation: animSection1 0.5s forwards ;
+}
+
+@keyframes animSection1{
+    0%{
+        transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(-2deg);
+    }
+}
+
+#seccion3{
+    transform: rotate(0deg);
+}
+
+#section3 {
+    animation: animSection3 0.5s forwards ;
+}
+
+@keyframes animSection3{
+    0%{
+        transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(2deg);
+    }
+}
 article #javascript {
     background: radial-gradient(rgb(247, 230, 85), rgb(252, 252, 252));
 }
