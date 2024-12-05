@@ -1,0 +1,139 @@
+body {
+    margin: 0; /* Elimino el margen por defecto del body para asegurar que el contenido ocupe todo el espacio disponible */
+    padding: 0; /* Elimino el padding por defecto del body para tener un control total sobre los márgenes */
+}
+
+nav {
+    background-color: rgb(236, 236, 236); /* Establezco el color de fondo del nav en un gris claro */
+    border: 1px solid black; /* Añadí un borde negro alrededor del nav */
+    box-shadow: inset 0px 0px 10px black; /* Aplico una sombra interna negra en el nav para darle un toque de profundidad */
+    height: 40px; /* Establezco una altura de 40px para el nav */
+    width: 100%; /* El nav ocupa todo el ancho de la pantalla */
+    display: flex; /* Utilizo flexbox para alinear los elementos dentro del nav */
+    align-items: center; /* Alineo los elementos dentro del nav verticalmente al centro */
+    padding: 10px; 
+}
+
+nav img {
+    height: 100%; /* Aseguro que la imagen ocupe toda la altura disponible del nav */
+    max-height: 100%; /* No dejo que la imagen exceda la altura del nav */
+    object-fit: contain; /* Hago que la imagen se ajuste dentro de su contenedor sin perder su proporción */
+    margin-right: 20px; /* Añado un margen de 20px a la derecha de la imagen para separar los elementos */
+}
+
+nav .menu-links {
+    display: flex; /* Utilizo flexbox para alinear los enlaces en línea */
+    width: 100%; /* Aseguro que los enlaces ocupen todo el ancho disponible */
+    justify-content: space-around; /* Distribuyo los enlaces de manera equidistante entre ellos */
+}
+
+nav .menu-links a {
+    text-decoration: none; /* Elimino el subrayado predeterminado de los enlaces */
+    color: inherit; /* Conservo el color predeterminado de los enlaces */
+    margin-right: 2%; /* Añado un pequeño margen derecho entre los enlaces */
+    border: 1px solid black; /* Aplico un borde negro alrededor de los enlaces */
+    box-shadow: 0px 0px 10px rgb(184, 9, 9); /* Añado una sombra roja a los enlaces para que resalten */
+    border-radius: 8px; /* Redondeo los bordes de los enlaces */
+    padding: 5px; /* Añado un pequeño relleno dentro de los enlaces para que no estén pegados al borde */
+}
+
+nav a:hover {
+    transition: background-color 0.5s ease; /* Aplico una transición suave al color de fondo cuando el usuario pasa el ratón por encima */
+    background-color: rgb(184, 9, 9); /* Cambio el color de fondo a rojo cuando el usuario pasa el ratón por encima */
+    color: white; /* Cambio el color del texto a blanco cuando el usuario pasa el ratón */
+}
+
+.menu-toggle {
+    display: none; /* Por defecto, el botón de menú está oculto */
+    background: none; /* Elimino el fondo del botón */
+    border-radius: 10px; /* Redondeo las esquinas del botón */
+    font-size: 24px; /* Establezco un tamaño de fuente grande para el ícono */
+    color: black; /* Pongo el color del ícono en negro */
+    cursor: pointer; /* Cambió el cursor a una mano para indicar que es un botón interactivo */
+}
+
+/* Mobile styles */
+@media all and (max-width: 600px) {
+    /* Modifico el comportamiento en pantallas de menos de 600px (dispositivos móviles) */
+
+    header, main, aside {
+        display: block !important; /* Aseguro que los elementos se muestren como bloques */
+        width: 100% !important; /* Los hago ocupar todo el ancho disponible */
+        margin: auto !important; /* Centralizo los elementos */
+        position: static !important; /* Aseguro que la posición sea estática */
+        float: none !important; /* Elimino cualquier flotado que pueda interferir */
+    }
+
+    aside {
+        height: 100px !important; /* Ajusto la altura del aside para pantallas pequeñas */
+    }
+
+    nav {
+        justify-content: space-between; /* Alineo el contenido del nav para que el logo y el botón estén a los extremos */
+        padding: 2%; /* Añado un poco de relleno al nav para mejorar su apariencia */
+        position: relative; /* Establezco la posición relativa para poder usar posicionamiento absoluto dentro */
+    }
+
+    nav img {
+        width: auto; /* Dejo que la imagen se ajuste de manera automática */
+    }
+
+    nav .menu-links {
+        display: none; /* El menú de enlaces está oculto por defecto */
+        width: 100%; /* El menú ocupará todo el ancho disponible */
+        flex-direction: column; /* Los enlaces se mostrarán de manera vertical */
+        padding: 10px 0; /* Añado un relleno para separar los enlaces */
+        align-items: center; /* Centra los enlaces dentro del contenedor */
+        position: absolute; /* Coloco el menú debajo del nav */
+        top: 100%; /* El menú comienza justo debajo del nav */
+        left: 0; /* Alineo el menú a la izquierda */
+        background-color: white; /* Pongo un fondo blanco en el menú */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Aplico una sombra ligera al menú */
+        transition: all 0.3s ease-in-out; /* Añado una transición suave cuando el menú se despliega */
+    }
+
+    nav .menu-links a {
+        width: 40%; /* Hago que los enlaces tengan un 40% del ancho del contenedor */
+        text-align: center; /* Centrado el texto de los enlaces */
+    }
+
+    .menu-links.show {
+        display: flex; /* Muestra el menú cuando la clase 'show' se añade */
+    }
+
+    .menu-links.show a {
+        text-align: center; /* Centro los enlaces */
+        border-bottom: 1px solid black; /* Añado una línea debajo de cada enlace */
+    }
+
+    nav a {
+        margin-bottom: 5px; /* Añado un pequeño margen entre los enlaces */
+        width: 100%; /* Los enlaces ocupan todo el ancho disponible */
+        text-align: center; /* Centrado el texto de los enlaces */
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de menú en pantallas pequeñas */
+        margin-right: 4%; /* Añado un margen a la derecha del botón */
+    }
+}
+
+header {
+    background-color: blue; /* Pongo un fondo azul al header */
+    height: 100px; /* Establezco una altura fija de 100px para el header */
+    width: 100%; /* El header ocupa todo el ancho de la pantalla */
+}
+
+main {
+    background-color: green; /* Pongo un fondo verde al main */
+    height: 400px; /* Establezco una altura de 400px para el main */
+    width: 75%; /* Hago que el main ocupe el 75% del ancho */
+    float: left; /* Floto el main hacia la izquierda */
+}
+
+aside {
+    background-color: yellow; /* Pongo un fondo amarillo al aside */
+    height: 400px; /* Establezco una altura de 400px para el aside */
+    width: 25%; /* El aside ocupa el 25% del ancho */
+    float: left; /* Floto el aside hacia la izquierda */
+}

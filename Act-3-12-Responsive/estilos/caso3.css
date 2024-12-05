@@ -1,0 +1,52 @@
+/* Media Query para pantallas con un máximo de 600px de ancho (dispositivos móviles) */
+@media all and (max-width: 600px) {
+    /* Aplico estos estilos cuando el ancho de la pantalla sea menor o igual a 600px */
+
+    nav, header, main, aside {
+        display: block !important; /* Establezco que todos estos elementos se comporten como bloques (uno debajo del otro) */
+        width: 100% !important; /* Aseguro que todos estos elementos ocupen el 100% del ancho disponible */
+        margin: auto !important; /* Centra todos los elementos horizontalmente */
+        position: static !important; /* Quiero que estos elementos tengan una posición estática (sin posicionamiento especial) */
+        float: none !important; /* Elimino cualquier flotado que pueda interferir con el diseño */
+    }
+    
+    aside {
+        height: 100px !important; /* Cambio la altura del aside a 100px, en lugar de 400px como en el estilo base */
+    }
+}
+
+/* Estilos generales para el body */
+body {
+    margin: 0; /* Elimino el margen por defecto alrededor del body */
+    padding: 0; /* Elimino el padding por defecto del body */
+}
+
+/* Estilos para el nav */
+nav {
+    background-color: brown; /* Cambio el color de fondo del nav a marrón */
+    height: 40px; /* Establezco una altura de 40px para el nav */
+    width: 100%; /* Aseguro que el nav ocupe todo el ancho disponible */
+}
+
+/* Estilos para el header */
+header {
+    background-color: blue; /* Establezco un fondo azul para el header */
+    height: 100px; /* Establezco una altura de 100px para el header */
+    width: 100%; /* Aseguro que el header ocupe todo el ancho disponible */
+}
+
+/* Estilos para el main */
+main {
+    background-color: green; /* Establezco un fondo verde para el main */
+    height: 400px; /* El main tiene una altura de 400px */
+    width: 75%; /* El main ocupa el 75% del ancho disponible */
+    float: left; /* El main se alinea a la izquierda */
+}
+
+/* Estilos para el aside */
+aside {
+    background-color: yellow; /* Establezco un fondo amarillo para el aside */
+    height: 400px; /* El aside tiene la misma altura que el main, 400px */
+    width: 25%; /* El aside ocupa el 25% del ancho disponible */
+    float: left; /* El aside se alinea a la izquierda del main */
+}
