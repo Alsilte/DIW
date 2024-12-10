@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptar imágenes</title>
+</head>
+
+<body>
+
+    <section>
+        <article>
+            <!--El elemento <picture> mejora la experiencia del usuario en dispositivos con pantallas pequeñas al optimizar 
+        el rendimiento y enfocar la atención en el globo, que es el punto principal de la imagen. Además, al reducir el tamaño 
+        de la imagen, también se mejora la velocidad de carga y el consumo de datos, lo cual es beneficioso para los usuarios móviles.-->
+            <picture>
+                <source media="(max-width: 600px)" srcset="img/globo-480x320.jpg">
+                <img src="img/globo.jpg" alt="Globo aerostático sobre un paisaje">
+            </picture>
+
+        </article>
+        <article>
+            <img 
+                src="img/polilla.jpg" 
+                alt="Polilla sobre una superficie" 
+                srcset="img/polilla-320px.jpg 320w, 
+                        img/polilla-480px.jpg 480w, 
+                        img/polilla.jpg 800w"
+                sizes="(max-width: 300px) 320px, 
+                       (max-width: 500px) 480px, 
+                       800px">
+        </article>
+    </section>
+
+</body>
+
+</html>
