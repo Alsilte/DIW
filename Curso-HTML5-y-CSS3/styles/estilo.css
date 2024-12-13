@@ -1,3 +1,5 @@
+
+
 body {
     padding: 20px;
     text-align: center;
@@ -10,7 +12,7 @@ body {
     text-align: left;
     box-shadow: 10px 10px 5px 5px #888888;
     border-radius: 20px 20px 20px 20px;
-    
+
 }
 
 header {
@@ -41,14 +43,16 @@ header h1 img {
     animation: rotar infinite 3s linear;
 }
 
-@keyframes rotar{
-    0%{
+@keyframes rotar {
+    0% {
         transform: rotate(0deg);
     }
-    50%{
+
+    50% {
         transform: rotate(180deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
@@ -75,6 +79,10 @@ nav li {
     /* Importante para que el submenú se alinee con su posición */
 }
 
+#menu {
+    display: none;
+    /* Oculta por defecto */
+}
 nav li#contenido {
     background-image: url("../img/book.png");
     background-repeat: no-repeat;
@@ -224,12 +232,12 @@ section:last-of-type {
 }
 
 
-#primera{
+#primera {
     left: 0px;
 }
 
 #chincheta1 {
-    
+
     left: 0px;
     animation: mueveChincheta1 1s forwards;
 }
@@ -238,6 +246,7 @@ section:last-of-type {
     0% {
         left: 0px;
     }
+
     100% {
         left: 208px;
     }
@@ -247,7 +256,7 @@ section:last-of-type {
     left: 0px;
 }
 
-#chincheta2{
+#chincheta2 {
     left: 0px;
     animation: mueveChincheta2 1s forwards 0.5s;
 
@@ -257,6 +266,7 @@ section:last-of-type {
     0% {
         left: 0px;
     }
+
     100% {
         left: 120px;
     }
@@ -266,52 +276,57 @@ section:last-of-type {
     left: 0px;
 }
 
-#chincheta3{
+#chincheta3 {
     left: 0px;
-    animation: mueveChincheta3 1s forwards ;
+    animation: mueveChincheta3 1s forwards;
 }
+
 @keyframes mueveChincheta3 {
     0% {
         left: 0px;
     }
+
     100% {
         left: 35px;
-    }   
+    }
 }
 
 #seccion1 {
     transform: rotate(0deg);
 }
 
-    #section1 {
-    animation: animSection1 0.5s forwards ;
+#section1 {
+    animation: animSection1 0.5s forwards;
 }
 
-@keyframes animSection1{
-    0%{
-        transform: rotate(0deg); 
+@keyframes animSection1 {
+    0% {
+        transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(-2deg);
     }
 }
 
-#seccion3{
+#seccion3 {
     transform: rotate(0deg);
 }
 
 #section3 {
-    animation: animSection3 0.5s forwards ;
+    animation: animSection3 0.5s forwards;
 }
 
-@keyframes animSection3{
-    0%{
-        transform: rotate(0deg); 
+@keyframes animSection3 {
+    0% {
+        transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(2deg);
     }
 }
+
 article #javascript {
     background: radial-gradient(rgb(247, 230, 85), rgb(252, 252, 252));
 }
@@ -336,4 +351,83 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+}
+
+@media (max-width: 1156px) {
+
+    #page {
+        width: 90%;
+        min-width: 320px;
+    }
+
+    header {
+        font-size: 0.7em;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+
+}
+
+@media (max-width: 838px) {
+    li {
+        margin: 0% 1% 4% 1%;
+    }
+
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    #menu {
+        display: block;
+        cursor: pointer;
+        /* Opcional: para indicar que es un botón clickeable */
+        margin: 80px;
+    }
+
+    nav ul {
+        display: none;
+        /* Oculta el menú por defecto */
+    }
+
+    nav ul.desplegado {
+        display: block;
+        /* Muestra el menú cuando tiene la clase 'active' */
+    }
+
+    nav li {
+
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        cursor: default;
+        position: relative;
+        /* Importante para que el submenú se alinee con su posición */
+        margin: 0% 1% 4% 1%;
+
+    }
+    
+}
+
+@media (max-width: 475px) {
+
+    li {
+        margin: 0;
+    }
+
 }

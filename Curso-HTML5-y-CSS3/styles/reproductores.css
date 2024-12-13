@@ -47,6 +47,10 @@ nav {
     padding: 5px;
 }
 
+#menu {
+    display: none;
+    /* Oculta por defecto */
+}
 nav ul {
     padding: 0;
 }
@@ -238,6 +242,85 @@ background:rgba(0,0,150,.2);
     background-color: rgb(170, 163, 163);
     border-radius: 10px;
     padding: 10px;
-    margin: 10px;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 720px;
+    display: block;
+    float: none;
+    
+}
+video{
+    width: 95%;
+    max-width: 720px;
+    height: auto;
+    margin: 5px
 }
 
+@media (max-width: 1156px) {
+
+    #page {
+        width: 90%;
+        min-width: 320px;
+    }
+
+    header {
+        font-size: 0.7em;
+    }
+
+    #menu {
+        display: block;
+        cursor: pointer;
+        /* Opcional: para indicar que es un botón clickeable */
+        margin: 80px;
+    }
+
+    nav ul {
+        display: none;
+        /* Oculta el menú por defecto */
+    }
+
+    nav ul.desplegado {
+        display: block;
+        /* Muestra el menú cuando tiene la clase 'active' */
+    }
+
+    nav li {
+
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        cursor: default;
+        position: relative;
+        /* Importante para que el submenú se alinee con su posición */
+        margin: 0% 1% 4% 1%;
+
+    }
+
+}
+
+@media (max-width: 838px) {
+    li {
+        margin: 0% 1% 4% 1%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 475px) {
+
+    li {
+        margin: 0;
+    }
+
+}
