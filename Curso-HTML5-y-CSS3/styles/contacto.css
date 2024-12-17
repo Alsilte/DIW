@@ -319,6 +319,61 @@ footer a {
         font-size: 0.7em;
     }
 
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #formulario {
+        margin: 4%;
+        padding: 2% 4%;
+
+    }
+
+    /* El h1 dentro de #formulario */
+    #formulario h1 {
+        position: static;
+        margin: 2% 0% 2% 10%;
+        padding: 0% 1% 0% 1%;
+        width: 70%;
+    }
+
+    /* Inputs que no sean del tipo submit */
+    #formulario input:not([type="submit"]) {
+        height: 5%;
+        width: 55%;
+    }
+
+    /* Inputs que no sean del tipo submit con foco */
+    #formulario input:not([type="submit"]):focus {
+        width: 61%;
+    }
+
+    /* Elemento textarea */
+    #formulario textarea {
+        width: 75%;
+    }
+
+    /* El botón submit como bloque */
+    #formulario button[type="submit"] {
+        display: block;
+    }
+
+}
+
+@media (max-width: 838px) {
+    li {
+        margin: 0% 1% 4% 1%;
+    }
+
+    
+
+    h1 {
+        font-size: 1.5em;
+    }
+    
     #menu {
         display: block;
         cursor: pointer;
@@ -348,25 +403,14 @@ footer a {
         margin: 0% 1% 4% 1%;
 
     }
-
-}
-
-@media (max-width: 838px) {
-    li {
-        margin: 0% 1% 4% 1%;
+    
+    form {
+        margin: 1% 0% 15% 0%;
+        padding: 2% 10%;
+        width: 90%;
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
+   
 }
 
 @media (max-width: 475px) {
