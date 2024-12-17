@@ -370,7 +370,11 @@ footer a {
         justify-content: center;
         align-items: center;
     }
-   
+
+    main {
+        display: flex; 
+        justify-content: space-around;
+        flex-wrap: wrap; 
 
 }
 
