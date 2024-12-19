@@ -56,36 +56,36 @@ grid-area: 1/2/4/6;
 grid-area: 2/3/5/6;
 
 ## Ejercicio 18
-
+order:1;
 
 ## Ejercicio 19
-
+order: -1;
 
 ## Ejercicio 20 
-
+grid-template-columns: 50%;
 
 ## Ejercicio 21
-
+grid-template-columns: 12.5%;
 
 ## Ejercicio 22 
-
+grid-template-columns: 100px 3em 40%;
 
 ## Ejercicio 23
-
+grid-template-columns:1fr 5fr;
 
 ## Ejercicio 24
-
+grid-template-columns: 50px 1fr 1fr 1fr 50px;
 
 ## Ejercicio 25
-
+grid-template-columns: 75px 3fr 2fr;
 
 ## Ejercicio 26
-
+grid-template-rows: 50px 0fr 0fr 0fr;	
 
 ## Ejercicio 27
-
+grid-template: 60% 60% / 200px;
 
 ## Ejercicio 28
-
+grid-template: 1fr 50px / 20% 80%;
 
 
