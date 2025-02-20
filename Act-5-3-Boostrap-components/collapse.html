@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia de Basketball</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <style>
+        .news-card {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="news-card">
+            <h2>Última noticia de Basketball</h2>
+
+            <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#newsContent"
+                aria-expanded="false" aria-controls="newsContent">
+                Ver noticia completa
+                <i class="bi bi-chevron-down collapse-icon ms-2"></i>
+            </button>
+
+            <div class="collapse" id="newsContent">
+                <div class="card card-body">
+                    <h3>Los Lakers ganan el campeonato</h3>
+                    <p>En un emocionante partido final, Los Ángeles Lakers se alzaron con la victoria en el último
+                        partido de las finales de la NBA contra Miami Heat. El equipo liderado por LeBron James y
+                        Anthony Davis logró un triunfo por 106-93 en el partido decisivo, cerrando la serie 4-2 a su
+                        favor.</p>
+
+                    <p>El MVP de las finales fue LeBron James, quien promedió 29.8 puntos, 11.8 rebotes y 8.5
+                        asistencias por partido durante la serie. Esta victoria marca el décimo séptimo campeonato de la
+                        franquicia, igualando el récord de los Boston Celtics.</p>
+
+                    <p>El entrenador Frank Vogel declaró en rueda de prensa: "Estamos increíblemente orgullosos de este
+                        grupo de jugadores. Han trabajado duro todo el año y merecen este momento".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <button 
+          class="btn btn-primary" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#noticiaBasket"
+          aria-expanded="false" 
+          aria-controls="noticiaBasket"
+        >
+          Ver noticia de baloncesto
+        </button>
+      
+        <div class="collapse mt-3" id="noticiaBasket">
+          <div class="card card-body">
+            <h3>Últimas noticias NBA</h3>
+            <p>Los Lakers ganan el clásico contra los Celtics en un emocionante partido...</p>
+            <a href="https://www.unocontraunoweb.com/2025/01/24/los-angeles-lakers-boston-celtics-2024-25-24-01-tatum-james/" class="btn btn-link">Leer más</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

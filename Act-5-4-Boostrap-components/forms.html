@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .was-validated .form-control:invalid,
+        .form-control.is-invalid {
+            border-color: #dc3545; /* Red border for invalid input */
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Formulario de Pedido</h1>
+        <form class="needs-validation" novalidate>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                <input type="text" class="form-control" id="apellido1" placeholder="Apellido 1" required>
+                <div class="valid-feedback">
+                    Nombre correcto
+                </div>
+              
+                <input type="text" class="form-control" id="apellido2" placeholder="Apellido 2" required>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="ejemplo@email.com" required>
+                <div class="invalid-feedback">
+                    Por favor introduzca un email válido.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Productos</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Producto 1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Producto 2
+                    </label>
+                </div>
+                </div>
+
+            <div class="mb-3">
+                <label for="exampleColorInput" class="form-label">Color de la caja</label>
+                <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+            </div>
+
+            <div class="mb-3">
+                <label for="unidades" class="form-label">Unidades</label>
+                <input type="range" class="form-range" min="1" max="10" id="unidades">
+            </div>
+
+            <div class="mb-3">
+                <label for="fichero" class="form-label">Fichero de contacto</label>
+                <input class="form-control" type="file" id="fichero">
+            </div>
+
+
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript for form validation
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            forms.forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+</body>
+
+</html>

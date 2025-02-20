@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Noticias en Carousel</title>
+    <style>
+        /* Cambiar color de las flechas a negro */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+        }
+
+        /* Cambiar color del texto en los captions a negro */
+        .carousel-caption h5,
+        .carousel-caption p {
+            color: black;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.452);
+            padding: 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselNoticias" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Noticia 1 -->
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <img src="https://e00-xlk-ue-marca.uecdn.es/files/article_660_webp/uploads/2025/02/06/67a4881c06843.webp"
+                                class="d-block w-75 mx-auto img-fluid" alt="MotoGP Test Sepang">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Calma en el test de MotoGP</h5>
+                                <p>La segunda jornada de test en Sepang fue más tranquila, con caídas de Márquez y Bagnaia.</p>
+                            </div>
+                        </div>
+                        <!-- Noticia 2 -->
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="https://resources.premierleague.pulselive.com/photo-resources/2025/02/05/b819d373-d258-4b8d-8ba9-1b54f531e649/Bissouma-v-Gravenberch.png?width=642&height=362"
+                                class="d-block w-75 mx-auto img-fluid" alt="Premier League">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Premier League en llamas</h5>
+                                <p>El Manchester City y el Arsenal pelean por el liderato en una temporada llena de sorpresas.</p>
+                            </div>
+                        </div>
+                        <!-- Noticia 3 -->
+                        <div class="carousel-item">
+                            <img src="https://img.asmedia.epimg.net/resizer/v2/77PUCXIOED52IBYJIOJZMCTMD4.jpg?auth=aaad12f2c80781d217c441bc2a0c9724c1d3f0dc86b05ec3e2c5c619bea8d595&width=976&height=549&focal=3970%2C2040"
+                                class="d-block w-75 mx-auto img-fluid" alt="NBA Playoffs">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Los Playoffs de la NBA se acercan</h5>
+                                <p>Los equipos luchan por asegurar su lugar en la postemporada en una de las campañas más emocionantes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controles -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
