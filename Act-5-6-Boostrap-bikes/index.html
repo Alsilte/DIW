@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CicloBike - Tu tienda de bicicletas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #03aa27;
+            --secondary-color: #ff9f43;
+            --dark-color: #016416;
+            --light-color: #ecf0f1;
+            --accent-color: #10ac56;
+        }
+
+        body {
+            background-color: #f5f6fa;
+            color: #2d3436;
+        }
+
+        .navbar {
+            background-color: var(--dark-color) !important;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            /* Fondo oscuro semitransparente */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .carousel-caption h3,
+        .carousel-caption p {
+            color: white !important;
+            /* Asegura que el texto sea blanco */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(100%);
+            /* Hace que las flechas sean negras */
+        }
+
+
+        /* Ajuste de imágenes en tarjetas */
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            /* Puedes ajustar la altura según prefieras */
+            object-fit: contain;
+            /* Mantiene la proporción de la imagen */
+        }
+
+        /* Ajuste de imágenes en el carrusel */
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            /* Ajusta la altura según necesites */
+            object-fit: contain;
+            /* Recorta la imagen manteniendo su proporción */
+        }
+
+
+        section {
+            padding: 40px 0;
+        }
+
+        #accesorios {
+            background-color: var(--light-color);
+        }
+
+        #componentes .card {
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        #bicicletas .card {
+            border-top: 4px solid var(--primary-color);
+        }
+
+        #accesorios .card {
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .form-section {
+            background-color: #dfe6e9;
+        }
+
+        .card-title {
+            color: var(--primary-color);
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 25%;
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="CicloBike Logo" class="me-2">
+                CicloBike
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bicicletas">Bicicletas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accesorios">Accesorios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#componentes">Componentes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#sillines">Sillines</a></li>
+                            <li><a class="dropdown-item" href="#cascos">Cascos</a></li>
+                            <li><a class="dropdown-item" href="#tijas">Tijas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#quienesSomos"
+                            aria-expanded="false" aria-controls="quienesSomos">
+                            Quiénes somos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#referencias"
+                            aria-expanded="false" aria-controls="referencias">
+                            Referencias
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Collapses para "Sobre Nosotros" -->
+    <div class="collapse" id="quienesSomos">
+        <div class="container">
+            <div class="card card-body mb-3">
+                <h4 class="text-primary">Quiénes Somos</h4>
+                <p>CicloBike es una tienda especializada en bicicletas fundada en 2010. Nuestro equipo está formado por
+                    apasionados ciclistas con años de experiencia en el sector. Ofrecemos las mejores marcas y un
+                    servicio técnico de calidad para todos nuestros clientes.</p>
+                <p>Nuestra misión es promover el ciclismo como estilo de vida saludable y sostenible, proporcionando
+                    productos de alta calidad y asesoramiento experto.</p>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="referencias">
+        <div class="container">
+            <div class="card card-body mb-3">
+                <h4 class="text-primary">Referencias</h4>
+                <p>CicloBike ha sido reconocida como una de las mejores tiendas de ciclismo en España durante tres años
+                    consecutivos. Nuestros clientes nos avalan con más de 500 reseñas positivas en Google y plataformas
+                    especializadas.</p>
+                <p>Trabajamos con las mejores marcas: Specialized, Trek, Cannondale, Giant, y muchas más. Además,
+                    colaboramos con clubes ciclistas locales y eventos deportivos en toda la región.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/orbea.jpg" class="d-block w-100" alt="Bicicletas">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Bicicletas de Alta Gama</h3>
+                    <p>Descubre nuestra selección de las mejores bicicletas del mercado</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/accesorios.jpg" class="d-block w-100" alt="Accesorios">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Accesorios Premium</h3>
+                    <p>Todo lo que necesitas para disfrutar al máximo de tu pasión</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/componentes.jpg" class="d-block w-100" alt="Componentes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Componentes de Calidad</h3>
+                    <p>Las mejores piezas para personalizar y mejorar tu bicicleta</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Artículos: Bicicletas -->
+    <section id="bicicletas">
+        <div class="container">
+            <h2 class="text-center section-title">Nuestras Bicicletas</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/montaña.jpeg" class="card-img-top" alt="Bicicleta de Montaña">
+                        <div class="card-body">
+                            <h5 class="card-title">Bicicleta de Montaña</h5>
+                            <p class="card-text">Perfecta para terrenos difíciles y aventuras en la naturaleza.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/carretera.jpeg" class="card-img-top" alt="Bicicleta de Carretera">
+                        <div class="card-body">
+                            <h5 class="card-title">Bicicleta de Carretera</h5>
+                            <p class="card-text">Diseñada para maximizar la velocidad en asfalto.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/urbana.jpeg" class="card-img-top" alt="Bicicleta Urbana">
+                        <div class="card-body">
+                            <h5 class="card-title">Bicicleta Urbana</h5>
+                            <p class="card-text">Cómoda y práctica para desplazamientos diarios en la ciudad.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artículos: Accesorios -->
+    <section id="accesorios">
+        <div class="container">
+            <h2 class="text-center section-title">Accesorios</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/luces.jpeg" class="card-img-top" alt="Luces">
+                        <div class="card-body">
+                            <h5 class="card-title">Luces LED</h5>
+                            <p class="card-text">Iluminación potente para rodar con seguridad en cualquier condición.
+                            </p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/portabidon.jpeg" class="card-img-top" alt="Portabidon">
+                        <div class="card-body">
+                            <h5 class="card-title">Portabidón Premium</h5>
+                            <p class="card-text">Ligero y resistente, mantén tu hidratación siempre a mano.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/alforjas.jpeg" class="card-img-top" alt="Alforjas">
+                        <div class="card-body">
+                            <h5 class="card-title">Alforjas Impermeables</h5>
+                            <p class="card-text">Capacidad y protección para tus pertenencias en cualquier clima.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artículos: Componentes -->
+    <section id="componentes">
+        <div class="container">
+            <h2 class="text-center section-title">Componentes</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" id="sillines">
+                    <div class="card h-100">
+                        <img src="./img/sillin.jpeg" class="card-img-top" alt="Sillín Ergonómico">
+                        <div class="card-body">
+                            <h5 class="card-title">Sillín Ergonómico</h5>
+                            <p class="card-text">Máximo confort para largas distancias sin molestias.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="cascos">
+                    <div class="card h-100">
+                        <img src="./img/casco.jpeg" class="card-img-top" alt="Casco Aerodinámico">
+                        <div class="card-body">
+                            <h5 class="card-title">Casco Aerodinámico</h5>
+                            <p class="card-text">Protección avanzada con el menor peso y resistencia al viento.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="tijas">
+                    <div class="card h-100">
+                        <img src="./img/tija.jpeg" class="card-img-top" alt="Tija de Carbono">
+                        <div class="card-body">
+                            <h5 class="card-title">Tija de Carbono</h5>
+                            <p class="card-text">Ligereza y absorción de vibraciones para mayor comodidad.</p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section class="form-section" id="contacto">
+        <div class="container">
+            <h2 class="text-center section-title">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label">Asunto</label>
+                                    <select class="form-select" id="asunto">
+                                        <option selected>Selecciona una opción</option>
+                                        <option value="1">Información de productos</option>
+                                        <option value="2">Servicio técnico</option>
+                                        <option value="3">Reclamación</option>
+                                        <option value="4">Otros</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="privacidad" required>
+                                    <label class="form-check-label" for="privacidad">Acepto la política de
+                                        privacidad</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; 2025 CicloBike.Alejandro Silla.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle con Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
